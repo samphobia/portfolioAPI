@@ -25,3 +25,21 @@ exports.postServiceData = (req, res, next) => {
     })
   }) 
 }
+
+exports.getserviceData = (req, res, next) => {
+  Services.find()
+  .then(service => {
+    res.status(200).json({
+      service: service,
+      status: "Success",
+      message: "service loaded"
+    })
+  })
+  .catch(err => {
+    res.status(400).json({
+      error: err,
+      status: "Failed",
+      message: "Resource Loading failed"
+    })
+  })
+}
