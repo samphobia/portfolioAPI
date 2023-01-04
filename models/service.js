@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
+
 const servicesSchema = new Schema ({
   title: {
     type: String,
@@ -24,4 +25,6 @@ const servicesSchema = new Schema ({
 { timestamps: true}
 )
 
-module.exports = mongoose.model('Services', servicesSchema)
+const Services = mongoose.model('Services', servicesSchema)
+
+exports.Services = Services

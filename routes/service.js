@@ -1,7 +1,7 @@
-const express = require("express")
+const express = require('express')
 
 const serviceController = require("../controllers/service")
 
-const router = express.Route()
+const router = express.Router()
 
-router.get('/services', serviceController.getserviceData)
+router.get('/services', serviceController.getServices)

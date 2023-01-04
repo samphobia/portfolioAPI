@@ -1,4 +1,4 @@
-const { Services } = required("../models/service")
+const  { Services }  = require("../models/service")
 
 exports.postServiceData = (req, res, next) => {
   const title = req.body.title;
@@ -26,7 +26,7 @@ exports.postServiceData = (req, res, next) => {
   }) 
 }
 
-exports.getserviceData = (req, res, next) => {
+exports.getServices = (req, res, next) => {
   Services.find()
   .then(service => {
     res.status(200).json({
